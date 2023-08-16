@@ -1,6 +1,6 @@
 import React from 'react'
 import { createClient } from 'contentful'
-import {Card, CardHeader, CardBody, CardFooter, Image} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import Link from 'next/link';
 export async function getStaticProps(){
 
@@ -15,41 +15,40 @@ export async function getStaticProps(){
     props: {images: res.items
     }
   }
+
+  
 }
 
 
 export default function Contact({images}) {
   console.log (images)
   return (
-    <div>
-<div className="gap-1 grid grid-cols-1 sm:grid-cols-3">
+    <div className="flex justify-center">
+<div className="gap-2 grid grid-cols-2 sm:grid-cols-4 w-fit  ">
+    
       {images.map((item, index) => (
         console.log (item),
-        <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")} className="h-96">
-          
-          <CardBody className="overflow-visible p-0">
-          <Link href="detailes/aa">
-            <Image
-              shadow="sm"
-              radius="lg"
-              width="100%"
-              alt="image"
-              className="fit-content object-cover "
-              src={item.fields.image.fields.file.url}
-            />
-               </Link>
-          </CardBody>
-         
-          <CardFooter className="text-small justify-between">
-          <Link href="detailes/aa">
-            <b>{item.fields.title}</b>
-            
-            <p className="text-default-500">{item.price}</p>
-            </Link>
-          </CardFooter>
-    
-        </Card>
-          
+
+        
+  <Card className="py-4 w-fit ">
+      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start w-fit">
+        <p className="text-tiny uppercase font-bold">Calendar</p>
+        <small className="text-default-500">2024, one sheet</small>
+        <small className="text-default-500">Available formats: A3+, A3</small>
+        <Button radius="sm" className="bg-gradient-to-tr from-violet-500 to-white-500 text-white shadow-lg" size="sm">
+      See more
+    </Button>
+      </CardHeader>
+      <CardBody className="overflow-visible py-2 w-fit">
+        <Image
+        
+          alt="Card background"
+          className=" h-full rounded-xl "
+          src={item.fields.image.fields.file.url}
+          width={270}
+        />
+      </CardBody>
+    </Card>
       ))}
     </div>
     </div>
