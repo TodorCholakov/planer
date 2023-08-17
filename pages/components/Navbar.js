@@ -14,16 +14,6 @@ import {
 export default function NavbarMenuA() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Calendars",
-    "Planner Refill",
-    "About us",
-    "Contact",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-  ];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
