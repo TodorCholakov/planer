@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { db } from "./components/utils/firebase";
+import { db } from "../utils/firebase"
 import { collection, addDoc } from "firebase/firestore"; 
 export default function Contact() {
 
