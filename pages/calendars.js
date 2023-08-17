@@ -1,7 +1,6 @@
 import React from 'react'
 import { createClient } from 'contentful'
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
-import Link from 'next/link';
 export async function getStaticProps(){
 
   const client = createClient({
@@ -30,7 +29,7 @@ export default function Contact({images}) {
         console.log (item),
 
         
-  <Card className="py-4 w-fit ">
+  <Card key={item.sys.id} className="py-4 w-fit ">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start w-fit">
         <p className="text-tiny uppercase font-bold">Calendar</p>
         <small className="text-default-500">2024, one sheet</small>
@@ -41,7 +40,6 @@ export default function Contact({images}) {
       </CardHeader>
       <CardBody className="overflow-visible py-2 w-fit">
         <Image
-        
           alt="Card background"
           className=" h-full rounded-xl "
           src={item.fields.image.fields.file.url}

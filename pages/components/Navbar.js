@@ -35,6 +35,7 @@ export default function NavbarMenuA() {
         <NavbarBrand>
           <Link href="/">
             <Image
+              alt="logo image"
               src="/logo.png"
               width="120"
               height="40"

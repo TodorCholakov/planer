@@ -1,8 +1,7 @@
 import { createClient } from 'contentful'
 import React, { useState } from 'react';
 import Link from 'next/link';
-import {Button, ButtonGroup} from "@nextui-org/react";
-import {Card, CardHeader, CardBody, CardFooter, Image} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 import Carousel from './components/Carousel';
 
 
@@ -23,7 +22,6 @@ export async function getStaticProps(){
 }
 
 export default function Home({images}) {
-  const [checkout, setCheckout] = useState(false)
   return (
     <main className="dark text-foreground bg-background flex flex-col items-center  mt-72">
          
