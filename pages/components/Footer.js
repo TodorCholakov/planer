@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
@@ -12,8 +12,8 @@ export default function Footer() {
   </div> 
   <div>
     <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
+    <Link href="/aboutUs" className="link link-hover">About us</Link>
+    <Link href="/contact" className="link link-hover">Contact</Link>
     <a className="link link-hover">Jobs</a>
     <a className="link link-hover">Press kit</a>
   </div> 

@@ -22,7 +22,8 @@ export async function getStaticProps(){
 export default function Contact({images}) {
   console.log (images)
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center  ">
+     
 <div className="gap-2 grid grid-cols-2 sm:grid-cols-4 w-fit  ">
     
       {images.map((item, index) => (
