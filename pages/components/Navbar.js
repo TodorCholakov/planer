@@ -27,8 +27,8 @@ export default function NavbarMenuA() {
             <Image
               alt="logo image"
               src="/logo.png"
-              width="140"
-              height="60"
+              width="130"
+              height="55"
               className="hover:opacity-60 ease-in-out duration-200"
             />
           </Link>

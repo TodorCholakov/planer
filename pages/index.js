@@ -23,7 +23,7 @@ export async function getStaticProps(){
 
 export default function Home({images}) {
   return (
-    <main className="dark text-foreground bg-background flex flex-col items-center  mt-72">
+    <main className="dark text-foreground bg-background flex flex-col items-center ">
          
      <Carousel className="mt-24"/>
      <form action="https://www.paypal.com/donate" method="post" target="_top">

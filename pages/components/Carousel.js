@@ -1,18 +1,23 @@
-import React from 'react'
+import Carousel from 'react-bootstrap/Carousel';
 
-export default function Carousel() {
+
+export default function CarouselA() {
+ 
   return (
-    <div className="carousel w-fit carousel-end h-96">
-
-  <div className="carousel-item w-fit">
-  <img src="/we2.png"  alt="Drink" />
-  </div> 
-  <div className="carousel-item w-fit">
-  <img src="/we2.png"  alt="Drink" />
-  </div> 
-  <div className="carousel-item w-fit">
-  <img src="/we2.png" alt="Drink" />
-  </div> 
-</div>
-  )
+    <div className="w-full justify-center items-center flex h-72 bg-white">
+    <Carousel className='w-full flex items-center'>
+      <Carousel.Item className='justify-center'>
+      <img src="/logo.png" className="m-auto"/>
+    
+      </Carousel.Item>
+      <Carousel.Item className='align-center'>
+      <img src="/logo.png" className="m-auto"/>
+       
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="/logo.png" className="m-auto"/>
+      </Carousel.Item>
+    </Carousel>
+  </div>
+  );
 }
