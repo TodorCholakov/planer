@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <div className="flex custom-min-h-screen flex-col p-2 w-full items-center bg-[url('/background.svg')] bg-no-repeat bg-cover">
        
-       <div className="card glass w-unit-9xl mt-10 mb-10">
+       <div className="card glass w-11/12  mt-10 mb-10">
         <div className="card-body">
           {showForm? <form className="rounded-lg shadow-xl  flex flex-col px-8 py-8 bg-white dark:bg-blue-500" onSubmit={handleSubmit}>
     <h1 className="text-2xl font-bold dark:text-gray-50">Send a message</h1>

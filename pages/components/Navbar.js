@@ -26,9 +26,9 @@ export default function NavbarMenuA() {
           <Link href="/">
             <Image
               alt="logo image"
-              src="/logo.svg"
-              width="130"
-              height="50"
+              src="/logo.png"
+              width="140"
+              height="60"
               className="hover:opacity-60 ease-in-out duration-200"
             />
           </Link>
@@ -48,7 +48,7 @@ export default function NavbarMenuA() {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Integrations
+            Other
           </Link>
         </NavbarItem>
       </NavbarContent>
