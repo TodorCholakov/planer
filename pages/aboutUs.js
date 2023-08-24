@@ -13,7 +13,7 @@ export default function aboutUs() {
         <div className="card-body">
           <h1 className="card-title text-center w-full">About us</h1>
           <p>
-            At ArtEcho, we're passionate about making creativity accessible to
+            At Petit Studio Art, we're passionate about making creativity accessible to
             all. We understand that in today's fast-paced world, people are
             seeking not only beautiful designs but also practical solutions that
             enhance their daily lives. That's why we offer a diverse range of
@@ -51,10 +51,10 @@ export default function aboutUs() {
             Transparency and integrity are at the core of our values. When you
             use our products, you can trust that they are genuinely free of
             charge, crafted with care, and aimed at enhancing your creative
-            journey. Thank you for choosing ArtEcho as your creative
+            journey. Thank you for choosing Petit Studio Art as your creative
             ally. Together, let's embark on a journey of artistic exploration
             and practical innovation. 
-            <br />Warm regards, The ArtEcho Team
+            <br />Warm regards, The Petit Studio Art Team
           </p>
         </div>
       </div>
