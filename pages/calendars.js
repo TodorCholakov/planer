@@ -1,21 +1,15 @@
 import React from 'react'
-import { createClient } from 'contentful'
+import { client } from '@/lib/contentful';
+import Link from 'next/link';
+
+
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 export async function getStaticProps(){
-
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-  })
-
-
     const res = await client.getEntries({content_type: 'images'})
   return {
     props: {images: res.items
     }
   }
-
-  
 }
 
 
@@ -35,14 +29,14 @@ export default function Contact({images}) {
         <p className="text-tiny uppercase font-bold">Calendar</p>
         <small className="text-default-500">2024, one sheet</small>
         <small className="text-default-500">Available formats: A3+, A3</small>
-        <Button radius="sm" className="bg-gradient-to-tr from-violet-500 to-white-500 text-white shadow-lg" size="sm">
-      See more
+        <Button radius="sm"  className="bg-gradient-to-tr from-violet-500 to-white-500 text-white shadow-lg" size="sm">
+      <Link href={`/calendars/${item.fields.slug}`}>See more</Link>
     </Button>
       </CardHeader>
       <CardBody className="overflow-visible py-2 w-fit">
-        <Image
+        <img
           alt="Card background"
-          className=" h-full rounded-xl "
+          className="rounded-xl "
           src={item.fields.image.fields.file.url}
           width={270}
         />

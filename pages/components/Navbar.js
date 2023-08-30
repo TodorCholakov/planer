@@ -47,8 +47,8 @@ export default function NavbarMenuA() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Other
+          <Link color="foreground" href="/stockimages/stockimages">
+            Stock images
           </Link>
         </NavbarItem>
       </NavbarContent>
