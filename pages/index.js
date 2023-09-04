@@ -1,7 +1,7 @@
 import { createClient } from 'contentful'
 import React, { useState } from 'react';
 import Link from 'next/link';
-import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import Carousel from './components/Carousel';
 
 
@@ -23,46 +23,26 @@ export async function getStaticProps(){
 
 export default function Home({images}) {
   return (
-    <main className="dark text-foreground bg-background flex flex-col items-center ">
-         
-     <Carousel />
-     <br />    <br />    <br />
-     <form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="YB9AXAT7SE34E" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_BG/i/scr/pixel.gif" width="1" height="1" />
-</form>
-
-      <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-      {images.map((item, index) => (
-        
-        <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
-          
-          <CardBody className="overflow-visible p-0 h-full">
-          <Link href="detailes/aa">
-            <Image
-              shadow="sm"
-              radius="lg"
-              height="100%"
-              alt={item.title}
-              className="w-full object-cover"
-              src={item.img}
-            />
-               </Link>
-          </CardBody>
-         
-          <CardFooter className="text-small justify-between">
-          <Link href="detailes/aa">
-            <b>{item.title}</b>
-           
-            <p className="text-default-500">{item.price}</p>
-            </Link>
-          </CardFooter>
-    
-        </Card>
-          
-      ))}
-    </div>
+    <main className="bg-background flex flex-col items-center ">
+    <Card
+      isFooterBlurred
+      radius="lg"
+      className="border-none"
+    >
+      <Image
+        alt="Woman listing to music"
+        className="object-cover"
+        height={200}
+        src="1.jpg"
+        width={200}
+      />
+      <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny text-white/80">Available soon.</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
+          Notify me
+        </Button>
+      </CardFooter>
+    </Card>
     </main>
   )
 }

@@ -27,7 +27,7 @@ export default function NavbarMenuA() {
             <Image
               alt="logo image"
               src="/logo.png"
-              width="90"
+              width="80"
               height="50"
               className="hover:opacity-60 ease-in-out duration-200"
             />
@@ -51,6 +51,11 @@ export default function NavbarMenuA() {
             Stock images
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link href="/website_development" aria-current="page">
+           Website development
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end"></NavbarContent>
       <NavbarMenu>
@@ -59,6 +64,7 @@ export default function NavbarMenuA() {
             sadf
           </Link>
         </NavbarMenuItem>
+        
       </NavbarMenu>
     </Navbar>
   );
