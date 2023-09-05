@@ -58,7 +58,7 @@ export default function Contact() {
         <motion.img
           onClick={() => setIntro(true)}
           className="pl-2 pr-2 pt-2 w-auto max-h-screen pb-20 hover:cursor-pointer"
-          src="/a.svg"
+          src="/ordinary.svg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.7 } }}
         />
@@ -66,7 +66,7 @@ export default function Contact() {
         <>
           <motion.div  className="flex">
             
-            <Card  variants={item} className="max-w-[400px] mt-2">
+            <Card  variants={item} className="max-w-[600px] mt-2">
               <CardHeader className="flex gap-3 justify-center">
                 <motion.img
               key="3"
@@ -80,15 +80,30 @@ export default function Contact() {
               <Divider />
               <CardBody>
                 <p className="text-justify">
-                  <span className="text-lg text-black"> Best designers</span>,{" "}
+                  <span className="text-lg text-rose-700 "> We work with</span>,{" "}
+                  <span className="text-lg font-ligh"> Best designers</span>,{" "}
                   <span className="text-2xl font-medium"> React JS</span>,{" "}
-                  <span className="text-sm"> Type Script</span>, 
-                  <span className="text-xl font-medium"> Node JS</span>, 
-                  <span className="text-l font-semibold"> Taiwlwind</span>, CSS, HTML5, Responsive, Rocket science, Fancy
-                  Trends, Unbeatable SEO, beyoned imagination backend speed,
-                  Fast, Uniquie, API, Bug free, No cookies, CSS Selectors, Tons
-                  of documentation Domain that fits you, Framework, HTTPS, SSL
-                  protocols, Mobile first, Promises, SAAS...{" "}
+                  <span className="text-sm  text-rose-700"> Type Script</span>, 
+                  <span className="text-xl font-medium text-fuchsia-400"> Node JS</span>, 
+                  <span className="text-l font-semibold text-red-600"> Taiwlwind</span>, 
+                  <span className="text-xl font-semibold text-cyan-700">CSS</span>, 
+                  <span className="text-sx font-semibold text-red-600"> HTML5</span>, 
+                  <span className="text-lg text-black"> Responsive</span>, 
+                  <span className="text-xl font-medium"> Rocket science</span>, 
+                  <span className="text-3xl text-fuchsia-800"> Fancy trends</span>, 
+                  <span className="text-2xl text-cyan-700"> Unbeatable SEO</span>, 
+                  <span className="text-l font-semibold text-rose-700 "> Beyoned imagination backend speed</span>,
+                  <span className="text-lg text-yellow-500"> Bug free</span>, 
+                  <span className="text-2xl text-cyan-700"> Best cookies in the town</span>, 
+                  <span className="text-xl font-medium  text-purple-600"> CSS Selectors</span>, 
+                  <span className="text-l font-medium "> Tons of documentation</span>, 
+                  <span className="text-lg text-red-600"> Phenomenal user experience</span>, 
+                  <span className="text-2xl"> Frameworks</span>, 
+                  <span className="text-xl text-black"> HTTPS</span>, 
+                  <span className="text-xl text-gray-600"> SSL protocols</span>, 
+                  <span className="text-2xl bg-gray-200 text-black"> Mobile first</span>, 
+                  Promises, 
+                  <span className="text-xl font-medium"> SAAS</span>...{" "}
                 </p>
               </CardBody>
               <Divider />
@@ -109,26 +124,26 @@ export default function Contact() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="flex items h-54 w-fit "
+            className="flex h-52 w-fit p-4"
           >
             <motion.img
               key="1"
               variants={item}
-              className=" w-1/3 p-2 mt-10"
+              className="w-1/3 p-2"
               src="/logoImages/petit.svg"
               alt="logo"
             />
             <motion.img
               key="2"
               variants={item}
-              className="w-1/3 p-2"
+              className="w-1/3 "
               src="/logoImages/studio.svg"
               alt="logo"
             />
             <motion.img
               key="3"
               variants={item}
-              className="w-1/3 p-2"
+              className="w-1/3"
               src="/logoImages/art.svg"
               alt="logo"
             />
