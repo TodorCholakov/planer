@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+
 import { Button } from "@nextui-org/react";
 import { db } from "../utils/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { BsChevronDown } from "react-icons/bs";
-import { motion, useAnimation } from "framer-motion";
+import {
+  Card,
+  CardFooter,
+  CardHeader,
+  Divider,
+  CardBody,
+} from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [dataCompetition, setDataCompetition] = useState([]);
@@ -32,65 +39,105 @@ export default function Contact() {
 
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1 }
-  }
+    show: { opacity: 1 },
+  };
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        duration:0.4,
-        ease:"easeOut",
-        staggerChildren: 0.1
-      }
-    }
-  }
+        duration: 0.4,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
   return (
     <div className="flex justify-center flex-col items-center">
       {!intro ? (
         <motion.img
-       
           onClick={() => setIntro(true)}
-          className="pt-2 w-auto max-h-screen pb-20 hover:cursor-pointer"
+          className="pl-2 pr-2 pt-2 w-auto max-h-screen pb-20 hover:cursor-pointer"
           src="/a.svg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.7 } }}
         />
       ) : (
-        <motion.div 
-       onClick={() => setIntro(false)}
-     variants={container}
-     initial="hidden"
-     animate="show"
-      className="flex items h-54 w-fit">
-        <motion.img
-         key="1"
-         variants={item}
-          className=" w-1/3 p-2"
-          src="/logoImages/petit.svg"
-          alt="logo"
-        />
-          <motion.img
-           key="2"
-           variants={item}
-          className="w-1/3 p-2"
-          src="/logoImages/studio.svg"
-          alt="logo"
-        />
-          <motion.img
-           key="3"
-           variants={item}
-          className="w-1/3 p-2"
-          src="/logoImages/art.svg"
-          alt="logo"
-        />
-      </motion.div>
+        <>
+          <motion.div  className="flex">
+            
+            <Card  variants={item} className="max-w-[400px] mt-2">
+              <CardHeader className="flex gap-3 justify-center">
+                <motion.img
+              key="3"
+              variants={item}
+              className=" p-2  h-24"
+              src="/logoImages/dontRead.svg"
+              alt="logo"
+            />
+            
+              </CardHeader>
+              <Divider />
+              <CardBody>
+                <p className="text-justify">
+                  <span className="text-lg text-black"> Best designers</span>,{" "}
+                  <span className="text-2xl font-medium"> React JS</span>,{" "}
+                  <span className="text-sm"> Type Script</span>, 
+                  <span className="text-xl font-medium"> Node JS</span>, 
+                  <span className="text-l font-semibold"> Taiwlwind</span>, CSS, HTML5, Responsive, Rocket science, Fancy
+                  Trends, Unbeatable SEO, beyoned imagination backend speed,
+                  Fast, Uniquie, API, Bug free, No cookies, CSS Selectors, Tons
+                  of documentation Domain that fits you, Framework, HTTPS, SSL
+                  protocols, Mobile first, Promises, SAAS...{" "}
+                </p>
+              </CardBody>
+              <Divider />
+              <CardFooter>
+                <Link
+                  isExternal
+                  showAnchorIcon
+                  href="https://github.com/nextui-org/nextui"
+                >
+                  We told you not to read :)
+                </Link>
+              </CardFooter>
+            </Card>
+          </motion.div>
+          <motion.div
+          
+            onClick={() => setIntro(false)}
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="flex items h-54 w-fit "
+          >
+            <motion.img
+              key="1"
+              variants={item}
+              className=" w-1/3 p-2 mt-10"
+              src="/logoImages/petit.svg"
+              alt="logo"
+            />
+            <motion.img
+              key="2"
+              variants={item}
+              className="w-1/3 p-2"
+              src="/logoImages/studio.svg"
+              alt="logo"
+            />
+            <motion.img
+              key="3"
+              variants={item}
+              className="w-1/3 p-2"
+              src="/logoImages/art.svg"
+              alt="logo"
+            />
+          </motion.div>
+        </>
       )}
 
-      
-      <h1>Best designers, React JS, Type Script, Node JS, Taiwlwind CSS, CSS, HTML5, Responsive, Rocket science, Fancy Trends, 
-        Unbeatable SEO, beyoned imagination backend speed, Fast, Uniquie, API, Bug free, No cookies, CSS Selectors, Tons of documentation
-        Domain that fits you, Framework, HTTPS, SSL protocols, Mobile first, Promises, SAAS... <br />
+      <h1>
+        <br />
       </h1>
 
       {showForm ? (
