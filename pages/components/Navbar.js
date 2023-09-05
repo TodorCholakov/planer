@@ -36,26 +36,22 @@ export default function NavbarMenuA() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarItem>
+          <Link href="/website_development" aria-current="page">
+           Website crafting
+          </Link>
+        </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="/calendars">
-            Calendars
+            Calendars design
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link href="#" aria-current="page">
-            Planner Refill
+            Planner refils
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/stockimages/stockimages">
-            Stock images
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/website_development" aria-current="page">
-           Website development
-          </Link>
-        </NavbarItem>
+        
       </NavbarContent>
       <NavbarContent justify="end"></NavbarContent>
       <NavbarMenu>
