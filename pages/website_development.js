@@ -34,10 +34,10 @@ export default function Contact() {
 
 
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="flex flex-col mx-auto items-center w-11/12">
       <motion.img
         onClick={() => setIntro(true)}
-        className="pl-2 pr-2 pt-2 w-auto max-h-screen pb-20 hover:scale-105 transition duration-150 ease-in-out"
+        className="pl-2 pr-2 w-auto h-screen pb-20 pt-5 hover:scale-105 transition duration-150 ease-in-out"
         src="/ordinary.svg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.7 } }}

@@ -24,7 +24,7 @@ export default function WeAre() {
       };
   return (
     <motion.div
-    className="card-container"
+    className="card-container max-w-11/12"
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, amount: 0.8 }}
