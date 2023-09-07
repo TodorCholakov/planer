@@ -44,9 +44,9 @@ export default function Contact() {
           src="/ordinary.svg"
         />
       </motion.div>
-      <WeAre />
+     
       <PetitStudioArt />
-
+      <WeAre />
       <h1>
         <br />
       </h1>

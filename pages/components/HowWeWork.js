@@ -7,7 +7,7 @@ import {
   } from "@nextui-org/react";
   import { motion, Variants } from "framer-motion";
 
-export default function Serious() {
+export default function HowWeWork() {
     const cardVariants = {
         offscreen: {
           y: 200
