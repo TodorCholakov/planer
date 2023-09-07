@@ -23,11 +23,14 @@ export default function WeAre() {
         }
       };
   return (
-    <motion.div
-    className="card-container flex justify-center w-[calc(100vw-20px)]  hover:scale-105 transition duration-100 ease-in-out"
+    <motion.div 
+    className="flex flex-col flex-center items-center w-[calc(100vw-60px)] h-[calc(100vh-60px)]"
     initial="offscreen"
     whileInView="onscreen"
-    viewport={{ once: true, amount: 0.8 }}
+    viewport={{ once: true, amount: 0.8 }}>
+    <div
+    className="card-container  hover:scale-105 transition duration-100 ease-in-out"
+    
   >
      <div className="splash"  />
       <motion.div className="card m-2" variants={cardVariants}>
@@ -70,6 +73,7 @@ export default function WeAre() {
             </Card>
       </motion.div>
     
+            </div>
             </motion.div>
   )
 }
