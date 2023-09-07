@@ -10,7 +10,7 @@ import {
 export default function WeAre() {
     const cardVariants = {
         offscreen: {
-          y: 300
+          y: 400
         },
         onscreen: {
           y: 50,
@@ -24,13 +24,13 @@ export default function WeAre() {
       };
   return (
     <motion.div
-    className="card-container max-w-11/12"
+    className="card-container flex justify-center w-[calc(100vw-20px)]  hover:scale-105 transition duration-100 ease-in-out"
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, amount: 0.8 }}
   >
      <div className="splash"  />
-      <motion.div className="card" variants={cardVariants}>
+      <motion.div className="card m-2" variants={cardVariants}>
       <Card  
     
      className="max-w-[600px] ">
@@ -61,8 +61,8 @@ export default function WeAre() {
                   <span className="text-2xl"> Frameworks</span>, 
                   <span className="text-xl text-black"> HTTPS</span>, 
                   <span className="text-xl text-gray-600"> SSL protocols</span>, 
-                  <span className="text-2xl bg-gray-200 text-black"> Mobile first</span>, 
-                  Promises, 
+                  <span className="text-2xl text-black"> Mobile first</span>, 
+                  <span className="text-2xl text-cyan-700"> Promises</span>, 
                   <span className="text-xl font-medium"> SAAS</span>...{" "}
                 </p>
               </CardBody>

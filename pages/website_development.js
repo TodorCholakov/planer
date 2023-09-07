@@ -32,16 +32,18 @@ export default function Contact() {
     console.log("Document written with ID: ", docRef.id);
   };
 
-
   return (
-    <div className="flex flex-col mx-auto items-center w-11/12">
-      <motion.img
-        onClick={() => setIntro(true)}
-        className="pl-2 pr-2 w-auto h-screen pb-20 pt-5 hover:scale-105 transition duration-150 ease-in-out"
-        src="/ordinary.svg"
+    <div className="flex flex-col flex-center mx-auto items-center w-full">
+      <motion.div
+        className="flex justify-center w-full bg-slate-100 h-[calc(100vh-60px)] content-center "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.7 } }}
-      />
+      >
+        <img
+          className=""
+          src="/ordinary.svg"
+        />
+      </motion.div>
       <WeAre />
       <PetitStudioArt />
 
