@@ -7,7 +7,7 @@ import {
   } from "@nextui-org/react";
   import { motion, Variants } from "framer-motion";
 
-export default function PetitStudioArt() {
+export default function Serious() {
     const cardVariants = {
         offscreen: {
           y: 200
@@ -58,10 +58,10 @@ export default function PetitStudioArt() {
              <Divider />
              <CardBody>
                <p className="text-center">
-                 <span className="text-lg text-rose-700 ">Could be your choise if you need</span>,<br />
+                 <span className="text-lg text-rose-700 "> We could be your choise if you need</span>,<br />
                  <span className="text-lg font-ligh"> Fresh start for your website</span>,{" "}
                  <span className="text-2xl font-medium"> Have idea but don't have enough resources</span>,{" "}
-                 <span className="text-sm  text-rose-700"> Try to make working portfolio website</span>, 
+                 <span className="text-sm  text-rose-700"> Try to make</span>, 
                  <span className="text-xl font-medium text-fuchsia-400"> Node JS</span>, 
                  <span className="text-l font-semibold text-red-600"> Taiwlwind</span>, 
                  <span className="text-xl font-semibold text-cyan-700"> CSS</span>, 

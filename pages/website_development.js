@@ -57,7 +57,7 @@ export default function Contact() {
           onSubmit={handleSubmit}
         >
           <h1 className="text-2xl font-bold dark:text-gray-50">
-            Send a message
+           Write to us and we will contact with you
           </h1>
           <label
             htmlFor="fullname"
@@ -67,6 +67,7 @@ export default function Contact() {
             <span className="text-red-500 dark:text-gray-50">*</span>
           </label>
           <input
+             required
             type="text"
             name="fullname"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
@@ -79,6 +80,7 @@ export default function Contact() {
             E-mail<span className="text-red-500">*</span>
           </label>
           <input
+          required
             type="email"
             name="email"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
