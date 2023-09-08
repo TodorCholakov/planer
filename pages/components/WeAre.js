@@ -37,7 +37,7 @@ export default function WeAre() {
             <CardBody>
               <p className="text-center">
                 <span className="text-lg text-rose-700 "> We work with</span>,{" "}
-                <span className="text-lg font-ligh"> Best designers</span>,{" "}
+                
                 <span className="text-2xl font-medium"> React JS</span>,{" "}
                 <span className="text-sm  text-rose-700"> Type Script</span>,
                 <span className="text-xl font-medium text-fuchsia-400">
@@ -63,6 +63,7 @@ export default function WeAre() {
                 <span className="text-xl font-medium"> Rocket science</span>,
                 <span className="text-3xl text-fuchsia-800"> Fancy trends</span>
                 ,<span className="text-2xl text-cyan-700"> Unbeatable SEO</span>
+                <span className="text-lg font-ligh"> Best designers</span>{" "}
                 ,
                 <span className="text-l font-semibold text-rose-700 ">
                   {" "}
@@ -94,9 +95,8 @@ export default function WeAre() {
                 <span className="text-2xl text-black"> Mobile first</span>,
                 <span className="text-2xl text-cyan-700"> Promises</span>,
                 <span className="text-xl font-medium"> SAAS</span>...
-                <span className="text-lg text-black">
-                  {" "}
-                  we can continue but it won't make any difference :){" "}
+                <span className="text-lg text-black"> choosing us ensures you get the latest technology right out of the box
+
                 </span>
               </p>
             </CardBody>
