@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Card, CardHeader, Divider, CardBody } from "@nextui-org/react";
 import { motion, Variants } from "framer-motion";
 import { Button } from "@nextui-org/react";
+import { db } from "../../utils/firebase"
+import { collection, addDoc } from "firebase/firestore";
+import Link from "next/link";
 
 export default function ContactForm() {
   const [showForm, setShowForm] = useState(true);
+  const [dataCompetition, setDataCompetition] = useState([]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     let fullname = e.target.fullname.value;
@@ -42,7 +46,7 @@ export default function ContactForm() {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
-      <div className="card-container w-full mb-10 max-w-[600px] hover:scale-105 transition duration-100 ease-in-out">
+      <div className="card-container w-full mb-10 max-w-[600px]">
         <div className="splash" />
         <motion.div className="card" variants={cardVariants}>
           <Card className="">
