@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
+import { MdLanguage } from "react-icons/md";
 import {
   Navbar,
   NavbarBrand,
@@ -14,9 +16,8 @@ import {
 export default function NavbarMenuA() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}  isBordered>
+    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="text-slate-600">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -36,9 +37,9 @@ export default function NavbarMenuA() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-      <NavbarItem>
+        <NavbarItem>
           <Link href="/website_development" aria-current="page">
-           Website crafting
+            Website crafting
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -53,14 +54,22 @@ export default function NavbarMenuA() {
         </NavbarItem>
         
       </NavbarContent>
-      <NavbarContent justify="end"></NavbarContent>
+      <NavbarContent justify="end">
+      <NavbarItem className="flex">
+          <MdLanguage className="text-2xl mr-1"/>
+          <select className="select select-bordered select-xs w-full max-w-xs">
+            <option>BG</option>
+            <option>EN</option>
+          </select>
+        </NavbarItem>
+        </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
           <Link className="w-full" href="adf" size="lg">
             sadf
           </Link>
         </NavbarMenuItem>
-        
+    
       </NavbarMenu>
     </Navbar>
   );
