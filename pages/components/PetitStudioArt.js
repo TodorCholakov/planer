@@ -32,7 +32,7 @@ export default function PetitStudioArt() {
       <div className="splash" />
       <motion.div className="flex w-fit" variants={cardVariants}>
         <Card className="max-w-[600px]  hover:scale-105 transition duration-100 ease-in-out">
-          <motion.CardHeader className="flex justify-center"  variants={container}  initial="hidden"
+          <CardHeader className="flex justify-center"  variants={container}  initial="hidden"
               animate="show">
             <motion.img
               key="1"
@@ -59,7 +59,7 @@ export default function PetitStudioArt() {
               variants={titleAnimation}
              
             />
-          </motion.CardHeader>
+          </CardHeader>
           <Divider />
           <CardBody>
             <p className="text-left">
