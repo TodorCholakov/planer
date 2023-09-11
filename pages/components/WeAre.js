@@ -3,6 +3,7 @@ import { Card, CardHeader, Divider, CardBody } from "@nextui-org/react";
 import { motion, Variants } from "framer-motion";
 
 export default function WeAre() {
+  
   const cardVariants = {
     offscreen: {
       y: 400,
@@ -17,9 +18,11 @@ export default function WeAre() {
       },
     },
   };
+
+
   return (
     <motion.div
-      className="flex flex-col flex-center items-center w-[calc(100vw-60px)] "
+      className="flex flex-col flex-center items-center opacity-90 w-[calc(100vw-60px)] "
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}

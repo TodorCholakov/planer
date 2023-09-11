@@ -41,7 +41,7 @@ export default function ContactForm() {
   };
   return (
     <motion.div
-      className="flex flex-col flex-center items-center h-auto m-2 w-[calc(100vw-60px)] "
+      className="flex flex-col flex-center items-center h-auto m-2 w-[calc(100vw-60px)] opacity-90"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}

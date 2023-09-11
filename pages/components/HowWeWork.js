@@ -19,13 +19,13 @@ export default function HowWeWork() {
   };
   return (
     <motion.div
-      className="card-container flex flex-col flex-center items-center w-[calc(100vw-20px)] "
+      className="card-container flex flex-col flex-center items-center w-[calc(100vw-60px)] opacity-90 "
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
       <div className="splash" />
-      
+
       <motion.div className="flex w-fit m-2" variants={cardVariants}>
         <Card className="max-w-[600px]  hover:scale-105 transition duration-100 ease-in-out">
           <CardHeader className="flex justify-center">

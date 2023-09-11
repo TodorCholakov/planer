@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {Card, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import Carousel from './components/Carousel';
 import {Switch} from "@nextui-org/react";
-
+import Donate from './components/Donate';
 
 
 export async function getStaticProps(){
@@ -24,7 +24,7 @@ export async function getStaticProps(){
 
 export default function Home({images}) {
   return (
-    <main className="bg-background flex flex-col items-center min-h-[calc(100vh-231px)]">
+    <main className="h-14 bg-gradient-to-r from-amber-100 to-pink-500  flex flex-col items-center min-h-[calc(100vh-60px)]">
      Why 
      to 
      pay 
@@ -34,7 +34,9 @@ export default function Home({images}) {
      we 
      already 
      created
+     <img className="mask mask-hexagon-2" src="/images/stock/photo-1567653418876-5bb0e566e1c2.jpg" />
 
+<Donate />
 
     </main>
   )

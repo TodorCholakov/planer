@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@nextui-org/react";
 import { db } from "../utils/firebase";
 import { collection, addDoc } from "firebase/firestore";
+
 export default function Contact() {
   const [dataCompetition, setDataCompetition] = useState([]);
   const [showForm, setShowForm] = useState(true);
@@ -27,15 +28,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex custom-min-h-screen flex-col p-2 w-full items-center bg-[url('/background.svg')] bg-no-repeat bg-cover">
-     
+    <div
+   
+      className="flex custom-min-h-screen flex-col p-2 w-full items-center bg-[url('/background.svg')] bg-no-repeat bg-cover"
+    >
       <div className="card glass w-11/12  mt-10 mb-10">
         <div className="card-body">
-        <h1 className="card-title text-center w-full">Contact</h1>
-        <p>If you have any questions, concerns, or feedback, please don't hesitate to
-      get in touch with us. You can reach us through the contact details
-      provided below or by filling out the contact form.
-      </p>
+          <h1 className="card-title text-center w-full">Contact</h1>
+          <p>
+            If you have any questions, concerns, or feedback, please don't
+            hesitate to get in touch with us. You can reach us through the
+            contact details provided below or by filling out the contact form.
+          </p>
           {showForm ? (
             <form
               className="rounded-lg shadow-xl  flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
@@ -124,7 +128,6 @@ export default function Contact() {
           )}
         </div>
       </div>
-      
     </div>
   );
 }
