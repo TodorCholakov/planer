@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Donate from "./components/Donate";
-import { titleAnimation, container } from "./animations";
+import { titleAnimation, container } from "../animations"
 
 export async function getStaticProps() {
   const client = createClient({

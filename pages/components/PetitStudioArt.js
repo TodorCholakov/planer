@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardHeader, Divider, CardBody } from "@nextui-org/react";
 import { motion, Variants } from "framer-motion";
-import {titleAnimation} from "../animations"
+import {titleAnimation} from "../../animations"
 
 export default function PetitStudioArt() {
  
