@@ -14,26 +14,16 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col flex-center mx-auto items-center w-full">
-      <motion.div
-        className="flex justify-center w-full bg-slate-100 h-[calc(100vh-60px)] content-center "
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.7 } }}
-      >
-        <img
-          className=""
-          src="/ordinary.svg"
-        />
-      </motion.div>
-     
       <PetitStudioArt />
       <WeAre />
       <HowWeWork />
       <ContactForm />
-      <h1>
-        <br />
-      </h1>
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="hosted_button_id" value="64C9BU26ZEWWW" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_BG/i/scr/pixel.gif" width="1" height="1" />
+</form>
 
-      
     </div>
   );
 }

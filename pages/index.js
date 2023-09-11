@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import {Card, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import Carousel from './components/Carousel';
+import {Switch} from "@nextui-org/react";
 
 
 
@@ -23,26 +24,18 @@ export async function getStaticProps(){
 
 export default function Home({images}) {
   return (
-    <main className="bg-background flex flex-col items-center ">
-    <Card
-      isFooterBlurred
-      radius="lg"
-      className="border-none"
-    >
-      <Image
-        alt="Woman listing to music"
-        className="object-cover"
-        height={200}
-        src="1.jpg"
-        width={200}
-      />
-      <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className="text-tiny text-white/80">Available soon.</p>
-        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
-          Notify me
-        </Button>
-      </CardFooter>
-    </Card>
+    <main className="bg-background flex flex-col items-center min-h-[calc(100vh-231px)]">
+     Why 
+     to 
+     pay 
+     for 
+     design 
+     that 
+     we 
+     already 
+     created
+
+
     </main>
   )
 }

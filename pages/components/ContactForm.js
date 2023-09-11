@@ -61,13 +61,13 @@ export default function ContactForm() {
        
      
         <form
-          className="rounded-lg shadow-xl   flex flex-col  px-8 py-8 bg-white dark:bg-blue-500"
+          className="rounded-lg shadow-xl w-full  flex flex-col  px-8 py-8 bg-white dark:bg-blue-500"
           onSubmit={handleSubmit}
         >
           
           <label
             htmlFor="fullname"
-            className="text-gray-500 font-light mt-8 dark:text-gray-50"
+            className="text-gray-500 font-light  dark:text-gray-50"
           >
             Full name
             <span className="text-red-500 dark:text-gray-50">*</span>
@@ -118,9 +118,7 @@ export default function ContactForm() {
             <Button
               type="submit"
               radius="sm"
-              className="bg-gradient-to-tr mt-4 from-violet-500 to-white-500 text-white shadow-lg"
-              size="l"
-            >
+              className="bg-gradient-to-tr mt-2 from-pink-500 to-yellow-500 text-white shadow-lg">
               Send
             </Button>
           </div>

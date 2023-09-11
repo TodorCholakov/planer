@@ -25,6 +25,7 @@ export default function HowWeWork() {
       viewport={{ once: true, amount: 0.8 }}
     >
       <div className="splash" />
+      
       <motion.div className="flex w-fit m-2" variants={cardVariants}>
         <Card className="max-w-[600px]  hover:scale-105 transition duration-100 ease-in-out">
           <CardHeader className="flex justify-center">
@@ -38,7 +39,7 @@ export default function HowWeWork() {
               
             <span className="text-2xl text-cyan-700">
                 {" "}
-                You have a clear vision of what you want to achieve? leave the rest to us. We'll bring your ideas to life.    </span>
+                You have a clear vision of what you want to achieve? Leave the rest to us. We'll bring your ideas to life.    </span>
                 <br /><br />
                     <br /><span className="text-xl text-cyan-700">Fill out the
                 contact form below and share your vision. Is it a webpage, a
@@ -48,7 +49,6 @@ export default function HowWeWork() {
                 all the finer details, timelines, and everything in between.
             
               </span>
-              
             </p>
           </CardBody>
         </Card>
