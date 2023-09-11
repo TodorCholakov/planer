@@ -1,13 +1,10 @@
 import React from "react";
 import { Card, CardHeader, Divider, CardBody } from "@nextui-org/react";
 import { motion, Variants } from "framer-motion";
-
+import {titleAnimation} from "../animations"
 
 export default function PetitStudioArt() {
-  const titleAnimation = {
-    hidden:{opacity:0},
-    show:{opacity:1, transition: {duration:1}},
-  }
+ 
   const container = {
     hidden:{x:100},
     show: {x:0, transition:{duration:0.75, ease:"easeOut", staggerChildren:0.25}}

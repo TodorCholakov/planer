@@ -1,3 +1,7 @@
+export const titleAnimation = {
+    hidden:{opacity:0},
+    show:{opacity:1, transition: {duration:1}},
+  }
 export const pageAnimation = {
     hiden:{
         opacity:0,
@@ -18,3 +22,8 @@ export const pageAnimation = {
         }
     }
 }
+
+export const container = {
+    hidden:{y:100},
+    show: {y:0, transition:{duration:0.75, ease:"easeOut", staggerChildren:0.15}}
+  }

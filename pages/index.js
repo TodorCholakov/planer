@@ -1,43 +1,43 @@
-import { createClient } from 'contentful'
-import React, { useState } from 'react';
-import Link from 'next/link';
-import {Card, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
-import Carousel from './components/Carousel';
-import {Switch} from "@nextui-org/react";
-import Donate from './components/Donate';
+import { createClient } from "contentful";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Donate from "./components/Donate";
+import { titleAnimation, container } from "./animations";
 
-
-export async function getStaticProps(){
-
+export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-  })
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
 
-
-    const res = await client.getEntries({content_type: 'images'})
+  const res = await client.getEntries({ content_type: "images" });
   return {
-    props: {images: res.items
-    }
-  }
+    props: { images: res.items },
+  };
 }
 
-export default function Home({images}) {
+export default function Home({ images }) {
   return (
-    <main className="h-14 bg-gradient-to-r from-amber-100 to-pink-500  flex flex-col items-center min-h-[calc(100vh-60px)]">
-     Why 
-     to 
-     pay 
-     for 
-     design 
-     that 
-     we 
-     already 
-     created
-     <img className="mask mask-hexagon-2" src="/images/stock/photo-1567653418876-5bb0e566e1c2.jpg" />
+    <main className="h-14 bg-gradient-to-r from-rose-50 to-rose-300  flex flex-col items-center min-h-[calc(100vh-60px)]">
+      <motion.div className="font-mono font-bold text-white text-6xl" variants={container} initial="hidden" animate="show">
 
-<Donate />
+        <motion.div className="mt-2" variants={titleAnimation}>We</motion.div>
 
+        <motion.div className="mt-2" variants={titleAnimation}>create</motion.div>
+    
+        <motion.div className="mt-2" variants={titleAnimation}>digital</motion.div>
+
+        <motion.div className="mt-2" variants={titleAnimation}>content</motion.div>
+   
+        <motion.div className="mt-2" variants={titleAnimation}>completely</motion.div>
+   
+        <motion.div className="mt-2" variants={titleAnimation}>for</motion.div>
+    
+        <motion.div className="mt-2" variants={titleAnimation}>free</motion.div>
+
+      </motion.div>
+
+      <Donate />
     </main>
-  )
+  );
 }
