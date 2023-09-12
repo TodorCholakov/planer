@@ -27,3 +27,8 @@ export const container = {
     hidden:{y:100},
     show: {y:0, transition:{duration:0.75, ease:"easeOut", staggerChildren:0.15}}
   }
+
+  export const containerIndex = {
+
+    show: {transition:{duration:0.75, ease:"easeOut", staggerChildren:0.15}}
+  }

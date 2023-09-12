@@ -19,7 +19,14 @@ export default function Contact() {
       <HowWeWork />
       <ContactForm />
       
-
+      <div>
+        <a href="https://www.buymeacoffee.com/tscholakovi" target="_blank">
+          <img 
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+          alt="Buy Me A Coffee" 
+          className="h-12 w-48" />
+          </a>
+        </div>
     </motion.div>
   );
 }
