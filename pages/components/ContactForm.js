@@ -118,7 +118,7 @@ export default function ContactForm() {
             <Button
               type="submit"
               radius="sm"
-              className="bg-gradient-to-tr mt-2 from-pink-500 to-yellow-500 text-white shadow-lg">
+              className="bg-gradient-to-tr mt-2 from-blue-300 to-blue-400 text-white shadow-lg">
               Send
             </Button>
           </div>

@@ -52,6 +52,15 @@ export default function Home({ images }) {
         <motion.div className="mt-2" variants={titleAnimation}>
           free
         </motion.div>
+        <div>
+        <a href="https://www.buymeacoffee.com/tscholakovi" target="_blank">
+          <img 
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+          alt="Buy Me A Coffee" 
+          className="h-12 w-48" />
+
+          </a>
+        </div>
       </motion.div>
 
       <Donate />

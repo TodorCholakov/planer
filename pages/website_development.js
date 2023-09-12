@@ -13,7 +13,7 @@ export default function Contact() {
 
 
   return (
-    <motion.div   className="bg-gradient-to-r from-amber-50 to-rose-100 flex flex-col flex-center mx-auto items-center w-full" >
+    <motion.div   className="bg-gradient-to-r from-blue-50 to-blue-300 flex flex-col flex-center mx-auto items-center w-full" >
       <PetitStudioArt />
       <WeAre />
       <HowWeWork />
