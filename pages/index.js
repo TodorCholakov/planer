@@ -24,32 +24,33 @@ export default function Home({ images }) {
         initial="hidden"
         animate="show"
       >
-        <motion.li className="pt-1" variants={titleAnimation}>
-          QUALITY
+        <motion.li className="pt-2" variants={titleAnimation}>
+          UNLEASH
         </motion.li>
-        <motion.li className="pt-1" variants={titleAnimation}>
-          DIGITAL
-        </motion.li>
-        <motion.li className="pt-1" variants={titleAnimation}>
-          CONTENT
-        </motion.li>
-        <motion.li className="pt-1" variants={titleAnimation}>
-          ALWAYS
-        </motion.li>
-        <motion.li className="pt-1" variants={titleAnimation}>
-          FREE
-        </motion.li>
-        <motion.li className="pt-1" variants={titleAnimation}>
-          FOR
-        </motion.li>
-        <motion.li className="pt-1 " variants={titleAnimation}>
+        <motion.li className="pt-2" variants={titleAnimation}>
           YOUR
         </motion.li>
-        <motion.li className="pt-1 " variants={titleAnimation}>
-          ARTISTIC
+        <motion.li className="pt-2" variants={titleAnimation}>
+          CREATIVITY
         </motion.li>
-        <motion.li className="pt-1 " variants={titleAnimation}>
-          INSPIRATION
+        <motion.li className="pt-2" variants={titleAnimation}>
+          WITH
+        </motion.li>
+        <motion.li className="pt-2" variants={titleAnimation}>
+          OUR
+        </motion.li>
+        <motion.li className="pt-2" variants={titleAnimation}>
+          FREE
+        </motion.li>
+        <motion.li className="pt-2" variants={titleAnimation}>
+          HIGH QUALITY
+        </motion.li>
+
+        <motion.li className="pt-2" variants={titleAnimation}>
+          DIGITAL
+        </motion.li>
+        <motion.li className="pt-2" variants={titleAnimation}>
+          CONTENT
         </motion.li>
       </motion.ul>
 

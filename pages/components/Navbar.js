@@ -60,12 +60,17 @@ export default function NavbarMenuA() {
       </NavbarContent>
       <NavbarContent justify="end">
       <NavbarItem className="flex items-center">
-          <MdLanguage className="text-3xl mr-1"/>
-          <select className="select select-bordered select-xs w-full max-w-xs">
-            <option>BG</option>
-            <option>EN</option>
-          </select>
+      <div>
+        <a href="https://www.buymeacoffee.com/tscholakovi" target="_blank">
+          <img 
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+          alt="Buy Me A Coffee" 
+          className=" w-40" />
+          </a>
+        </div>
         </NavbarItem>
+ 
+      
         </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>

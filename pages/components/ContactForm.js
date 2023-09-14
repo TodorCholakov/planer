@@ -56,7 +56,7 @@ export default function ContactForm() {
               </h1>
             </CardHeader>
             <Divider />
-            <CardBody>
+            <CardBody className="p-4">
             {showForm ? (
        
      
