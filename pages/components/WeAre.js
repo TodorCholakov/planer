@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardHeader, Divider, CardBody } from "@nextui-org/react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function WeAre() {
   

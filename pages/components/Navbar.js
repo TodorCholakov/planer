@@ -39,26 +39,39 @@ export default function NavbarMenuA() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link href="/website_development" aria-current="page">
-            Website development
+            Web development
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="/calendars">
-            Calendars design
+            Calendars
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link href="#" aria-current="page">
-            Planner refils
+            Planner
           </Link>
         </NavbarItem>
-        
+        <NavbarItem>
+          <Link href="#" aria-current="page">
+            Media
+          </Link>
+        </NavbarItem> 
       </NavbarContent>
-      
+      <NavbarContent justify="end">
+      <NavbarItem className="flex items-center">
+          <MdLanguage className="text-3xl mr-1"/>
+          <select className="select select-bordered select-xs w-full max-w-xs">
+            <option>BG</option>
+            <option>EN</option>
+          </select>
+        </NavbarItem>
+        </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link className="w-full" href="adf" size="lg">
-            Website development
+        
+          <Link className="w-full" href="/website_development" size="lg">
+            Web development
           </Link>
         </NavbarMenuItem>
     
