@@ -45,7 +45,6 @@ export default function Home({ images }) {
         <motion.li className="pt-2" variants={titleAnimation}>
           HIGH QUALITY
         </motion.li>
-
         <motion.li className="pt-2" variants={titleAnimation}>
           DIGITAL
         </motion.li>

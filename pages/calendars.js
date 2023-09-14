@@ -16,9 +16,9 @@ export async function getStaticProps(){
 export default function Contact({images}) {
   console.log (images)
   return (
-    <div className="flex justify-center  ">
+    <main className="bg-gradient-to-r from-red-50 to-red-200  flex flex-col items-center  ">
      
-<div className="gap-2 grid grid-cols-2 sm:grid-cols-4 w-fit  ">
+<div className="gap-2 grid grid-cols-2 sm:grid-cols-5 w-fit p-4">
     
       {images.map((item, index) => (
         console.log (item),
@@ -29,11 +29,11 @@ export default function Contact({images}) {
         <p className="text-tiny uppercase font-bold">Calendar</p>
         <small className="text-default-500">2024, one sheet</small>
         <small className="text-default-500">Available formats: A3+, A3</small>
-        <Button radius="sm"  className="bg-gradient-to-tr from-violet-500 to-white-500 text-white shadow-lg" size="sm">
+        <Button radius="sm"  className="bg-gradient-to-r from-gray-300 to-gray-400 text-white shadow-lg" size="sm">
       <Link href={`/calendars/${item.fields.slug}`}>See more</Link>
     </Button>
       </CardHeader>
-      <CardBody className="overflow-visible py-2 w-fit">
+      <CardBody className="overflow-visible p-2 w-fit">
         <img
           alt="Card background"
           className="rounded-xl "
@@ -44,7 +44,37 @@ export default function Contact({images}) {
     </Card>
       ))}
     </div>
-    </div>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fillRule="evenodd"
+        strokeLinejoin="round"
+        strokeMiterlimit="2"
+        clipRule="evenodd"
+        viewBox="0 0 1991 69"
+        className="max-w-fit -mb-1"
+      >
+        <path fill="none" d="M0 0H1990.73V68.188H0z"></path>
+        <clipPath id="_clip1">
+          <path d="M0 0H1990.73V68.188H0z"></path>
+        </clipPath>
+        <g clipPath="url(#_clip1)">
+          <path
+            fill="none"
+            d="M2022.33 33.625l4.327 68.208H-15.723V51.331S287.173-1.476 672.283 15.609c385.111 17.084 560.357 41.314 863.253 39.45 302.896-1.864 447.853-16.774 486.797-21.434z"
+          ></path>
+          <clipPath id="_clip2">
+            <path d="M2022.33 33.625l4.327 68.208H-15.723V51.331S287.173-1.476 672.283 15.609c385.111 17.084 560.357 41.314 863.253 39.45 302.896-1.864 447.853-16.774 486.797-21.434z"></path>
+          </clipPath>
+          <g clipPath="url(#_clip2)">
+            <path
+              fill="#fff"
+              d="M2112.95-150.384l-2149.8-12.85-12.621 370.78 2149.8 12.851 12.62-370.781z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </main>
   )
 }
+
 

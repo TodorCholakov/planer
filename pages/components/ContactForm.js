@@ -73,7 +73,7 @@ export default function ContactForm() {
             <span className="text-red-500 dark:text-gray-50">*</span>
           </label>
           <input
-             required
+            required
             type="text"
             name="fullname"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
@@ -99,6 +99,7 @@ export default function ContactForm() {
             Subject<span className="text-red-500">*</span>
           </label>
           <input
+          required
             type="text"
             name="subject"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
@@ -111,6 +112,7 @@ export default function ContactForm() {
             Message<span className="text-red-500">*</span>
           </label>
           <textarea
+          required
             name="message"
             className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
           ></textarea>
