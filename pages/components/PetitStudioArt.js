@@ -27,7 +27,7 @@ export default function PetitStudioArt() {
       className="opacity-90 card-container flex flex-col flex-center items-center w-[calc(100vw-60px)] "
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       <div className="splash" />
       <motion.div className="flex w-fit" variants={cardVariants}>
@@ -37,7 +37,7 @@ export default function PetitStudioArt() {
             <motion.img
               key="1"
               
-              className="w-24 p-2"
+              className="w-20 p-2"
               src="/logoImages/petit.svg"
               alt="logo"
               variants={titleAnimation}
@@ -45,7 +45,7 @@ export default function PetitStudioArt() {
             />
             <motion.img
               key="2"
-              className="w-32 p-2"
+              className=" p-2 w-28"
               src="/logoImages/studio.svg"
               alt="logo"
               variants={titleAnimation}
@@ -53,7 +53,7 @@ export default function PetitStudioArt() {
             />
             <motion.img
               key="3"
-              className="w-24 p-2"
+              className="p-2 w-24"
               src="/logoImages/art.svg"
               alt="logo"
               variants={titleAnimation}
@@ -61,7 +61,7 @@ export default function PetitStudioArt() {
             />
           </CardHeader>
           <Divider />
-          <CardBody>
+          <CardBody className="p-4">
             <p className="text-left">
               <span className="text-xl text-gray-600">
                 At Petit Studio Art, we specialize in crafting

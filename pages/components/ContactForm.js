@@ -44,7 +44,7 @@ export default function ContactForm() {
       className="flex flex-col flex-center items-center h-auto m-2 w-[calc(100vw-60px)] opacity-90"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       <div className="card-container w-full mb-10 max-w-[600px]">
         <div className="splash" />

@@ -22,7 +22,7 @@ export default function HowWeWork() {
       className="card-container flex flex-col flex-center items-center w-[calc(100vw-60px)] opacity-90 "
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       <div className="splash" />
 
@@ -34,20 +34,22 @@ export default function HowWeWork() {
             </h1>
           </CardHeader>
           <Divider />
-          <CardBody>
+          <CardBody className="p-4">
             <p className="text-center">
-              
-            <span className="text-2xl text-cyan-700">
+              <span className="text-2xl text-cyan-700">
                 {" "}
-                You have a clear vision of what you want to achieve? Leave the rest to us. We'll bring your ideas to life.    </span>
-                <br /><br />
-                    <br /><span className="text-xl text-cyan-700">Fill out the
-                contact form below and share your vision. Is it a webpage, a
-                captivating portfolio, or perhaps a unique application? We're
-                thrilled to offer you a complimentary demo design for your
-                project. If you find it appealing, we'll move forward to discuss
-                all the finer details, timelines, and everything in between.
-            
+                You have a clear vision of what you want to achieve? Leave the
+                rest to us. We'll bring your ideas to life.{" "}
+              </span>
+              <br />
+              <br />
+              <span className="text-xl text-cyan-700">
+                Fill out the contact form below and share your vision. Is it a
+                webpage, a captivating portfolio, or perhaps a unique
+                application? We're thrilled to offer you a complimentary demo
+                design for your project. If you find it appealing, we'll move
+                forward to discuss all the finer details, timelines, and
+                everything in between.
               </span>
             </p>
           </CardBody>

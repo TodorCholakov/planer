@@ -25,19 +25,19 @@ export default function WeAre() {
       className="flex flex-col flex-center items-center opacity-90 w-[calc(100vw-60px)] "
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       <div className="card-container  hover:scale-105 transition duration-100 ease-in-out">
         <div className="splash" />
         <motion.div className="card m-2" variants={cardVariants}>
           <Card className="max-w-[600px] ">
-            <CardHeader className="flex gap-3 justify-center">
+            <CardHeader className="flex  justify-center">
               <h1 className="text-4xl font-semibold text-rose-700">
                 BORING PART!
               </h1>
             </CardHeader>
             <Divider />
-            <CardBody>
+            <CardBody className="p-4">
               <p className="text-center">
                 <span className="text-lg text-rose-700 "> We work with</span>,{" "}
                 
