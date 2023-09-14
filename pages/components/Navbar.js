@@ -39,7 +39,7 @@ export default function NavbarMenuA() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link href="/website_development" aria-current="page">
-            Website crafting
+            Website development
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -58,7 +58,7 @@ export default function NavbarMenuA() {
       <NavbarMenu>
         <NavbarMenuItem>
           <Link className="w-full" href="adf" size="lg">
-            sadf
+            Website development
           </Link>
         </NavbarMenuItem>
     
