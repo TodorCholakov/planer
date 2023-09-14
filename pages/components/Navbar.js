@@ -54,15 +54,7 @@ export default function NavbarMenuA() {
         </NavbarItem>
         
       </NavbarContent>
-      <NavbarContent justify="end">
-      <NavbarItem className="flex items-center">
-          <MdLanguage className="text-3xl mr-1"/>
-          <select className="select select-bordered select-xs w-full max-w-xs">
-            <option>BG</option>
-            <option>EN</option>
-          </select>
-        </NavbarItem>
-        </NavbarContent>
+      
       <NavbarMenu>
         <NavbarMenuItem>
           <Link className="w-full" href="adf" size="lg">

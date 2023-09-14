@@ -60,7 +60,7 @@ export default function Home({ images }) {
         strokeMiterlimit="2"
         clipRule="evenodd"
         viewBox="0 0 1991 69"
-        className="w-full -mb-1"
+        className="max-w-fit -mb-1"
       >
         <path fill="none" d="M0 0H1990.73V68.188H0z"></path>
         <clipPath id="_clip1">
