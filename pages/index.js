@@ -19,7 +19,7 @@ export default function Home({ images }) {
   return (
     <main className="bg-gradient-to-r from-rose-50 to-rose-300  flex flex-col items-center  ">
       <motion.ul
-        className=" pt-4 font-mono  font-bold text-white text-6xl ml-2 mr-2  flex flex-col min-h-[calc(100vh-60px)] justify-end"
+        className=" pt-4 font-mono  font-bold text-white text-6xl ml-2 mr-2  flex flex-col min-h-[calc(100vh-60px)] justify-start"
         variants={containerIndex}
         initial="hidden"
         animate="show"
@@ -51,38 +51,39 @@ export default function Home({ images }) {
         <motion.li className="p-1 " variants={titleAnimation}>
           SMILE 
         </motion.li>
-        <motion.li   className="last:absulute b-0" variants={titleAnimation}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            strokeLinejoin="round"
-            strokeMiterlimit="2"
-            clipRule="evenodd"
-            viewBox="0 0 1533 495"
-          >
-            <path fill="none" d="M0 0H1532.56V494.748H0z"></path>
-            <clipPath id="_clip1">
-              <path d="M0 0H1532.56V494.748H0z"></path>
-            </clipPath>
-            <g clipPath="url(#_clip1)">
-              <path
-                fill="none"
-                d="M1536.88 138.184l3.31 363.442H-22.29V232.529S209.434-48.851 504.055 42.184c294.621 91.034 428.69 220.138 660.414 210.207 231.724-9.931 342.621-89.38 372.414-114.207z"
-              ></path>
-              <clipPath id="_clip2">
-                <path d="M1536.88 138.184l3.31 363.442H-22.29V232.529S209.434-48.851 504.055 42.184c294.621 91.034 428.69 220.138 660.414 210.207 231.724-9.931 342.621-89.38 372.414-114.207z"></path>
-              </clipPath>
-              <g clipPath="url(#_clip2)">
-                <path
-                  fill="#fff"
-                  fillOpacity="0.59"
-                  d="M1606.2 41.179L-129.81 16.416l-9.655 676.897 1736.01 24.762 9.655-676.896z"
-                ></path>
-              </g>
-            </g>
-          </svg>
-        </motion.li>
+        
       </motion.ul>
+
+   
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fillRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
+      clipRule="evenodd"
+      viewBox="0 0 1991 69"
+      className="w-full -mb-1"
+    >
+      <path fill="none" d="M0 0H1990.73V68.188H0z"></path>
+      <clipPath id="_clip1">
+        <path d="M0 0H1990.73V68.188H0z"></path>
+      </clipPath>
+      <g clipPath="url(#_clip1)">
+        <path
+          fill="none"
+          d="M2022.33 33.625l4.327 68.208H-15.723V51.331S287.173-1.476 672.283 15.609c385.111 17.084 560.357 41.314 863.253 39.45 302.896-1.864 447.853-16.774 486.797-21.434z"
+        ></path>
+        <clipPath id="_clip2">
+          <path d="M2022.33 33.625l4.327 68.208H-15.723V51.331S287.173-1.476 672.283 15.609c385.111 17.084 560.357 41.314 863.253 39.45 302.896-1.864 447.853-16.774 486.797-21.434z"></path>
+        </clipPath>
+        <g clipPath="url(#_clip2)">
+          <path
+            fill="#fff"
+            d="M2112.95-150.384l-2149.8-12.85-12.621 370.78 2149.8 12.851 12.62-370.781z"
+          ></path>
+        </g>
+      </g>
+    </svg>
     </main>
   );
 }
