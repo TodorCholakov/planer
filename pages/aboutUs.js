@@ -8,7 +8,7 @@ export default function aboutUs() {
        
       <div className="card glass max-w-7xl  mt-10 mb-20">
         <figure>
-          <Image width="200" height="200" src="/logo.png" alt="Shoes" className="mt-10"/>
+          <Image width="100" height="100" src="/logo.png" alt="Shoes" className="mt-10"/>
         </figure>
         <div className="card-body">
           <h1 className="card-title text-center w-full">About us</h1>
