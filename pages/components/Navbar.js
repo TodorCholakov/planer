@@ -53,7 +53,7 @@ export default function NavbarMenuA() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" aria-current="page">
+          <Link href="/media/media-main" aria-current="page">
             Media
           </Link>
         </NavbarItem> 
@@ -77,6 +77,9 @@ export default function NavbarMenuA() {
         
           <Link className="w-full" href="/website_development" size="lg">
             Web development
+          </Link>
+          <Link className="w-full" href="/media/media-main" size="lg">
+            Media
           </Link>
         </NavbarMenuItem>
     
