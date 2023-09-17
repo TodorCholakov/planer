@@ -1,11 +1,24 @@
 import React from 'react'
 import Link from 'next/link';
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+import { motion } from "framer-motion";
+import { titleAnimation, containerIndex } from "../../animations";
 export default function mediaMain() {
   return (
-    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-rose-50 to-rose-300 min-h-[calc(100vh-150px)]'>
-    <div className="justify-center gap-2 grid grid-cols-2 sm:grid-cols-3 ">
-       <Card
+
+    <div className='flex flex-col justify-center  items-center bg-gradient-to-r from-rose-50 to-rose-300 min-h-[calc(100vh-150px)]'>
+   
+       
+    
+    <div className="flex flex-col justify-center   items-center min-h-[calc(100vh-150px)]">
+    <motion.ul
+        className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
+        variants={containerIndex}
+        initial="hidden"
+        animate="show"
+      >
+        <motion.li variants={titleAnimation}>
+        <Card
       isFooterBlurred
       radius="lg"
       className="border-none w-fit drop-shadow-xl m-2 hover:scale-105 "
@@ -22,7 +35,9 @@ export default function mediaMain() {
         
       </CardFooter>
     </Card>
-    <Card
+        </motion.li>
+        <motion.li  variants={titleAnimation}>
+        <Card
       isFooterBlurred
       radius="lg"
       className="border-none w-fit m-2"
@@ -39,7 +54,9 @@ export default function mediaMain() {
         
       </CardFooter>
     </Card>
-    <Card
+        </motion.li>
+        <motion.li  variants={titleAnimation}>
+        <Card
       isFooterBlurred
       radius="lg"
       className="border-none w-fit m-2"
@@ -56,7 +73,9 @@ export default function mediaMain() {
         
       </CardFooter>
     </Card>
-    
+        </motion.li>
+        
+      </motion.ul>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +84,7 @@ export default function mediaMain() {
         strokeMiterlimit="2"
         clipRule="evenodd"
         viewBox="0 0 1991 69"
-        className="max-w-fit -mb-1"
+        className="w-100 -mb-2 "
       >
         <path fill="none" d="M0 0H1990.73V68.188H0z"></path>
         <clipPath id="_clip1">
@@ -88,5 +107,7 @@ export default function mediaMain() {
         </g>
       </svg>
       </div>
+      
+  
   )
 }
