@@ -18,10 +18,10 @@ export default function mediaMain() {
         animate="show"
       >
         <motion.li variants={titleAnimation}>
-        <Card
+        <Card 
       isFooterBlurred
       radius="lg"
-      className="border-none w-fit drop-shadow-xl m-2 hover:scale-105 "
+      className="border-none w-fit drop-shadow-xl m-2 hover:scale-105 cursor-pointer"
     >
       <img
         alt="Woman listing to music"
@@ -31,12 +31,14 @@ export default function mediaMain() {
         width={250}
       />
       <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className=" text-white/80 text-tiny">Sounds</p>
+       <Link href="/media/images"><p className=" text-white/80 text-tiny">Sounds</p></Link> 
         
       </CardFooter>
+    
     </Card>
         </motion.li>
         <motion.li  variants={titleAnimation}>
+        <Link href="/media/images">
         <Card
       isFooterBlurred
       radius="lg"
@@ -50,10 +52,11 @@ export default function mediaMain() {
         width={250}
       />
       <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className=" text-white/80 text-tiny">Sounds</p>
+        <p className=" text-white/80 text-tiny">Images</p>
         
       </CardFooter>
     </Card>
+    </Link>
         </motion.li>
         <motion.li  variants={titleAnimation}>
         <Card

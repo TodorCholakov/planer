@@ -6,3 +6,4 @@
 .custom-min-h-screen {
     min-height: calc(100vh - 231px); /* Subtract 50 pixels from the full viewport height */
   }
+
