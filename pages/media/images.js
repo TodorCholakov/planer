@@ -11,13 +11,14 @@ import {
 } from "@nextui-org/react";
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "images" });
+  
   return {
     props: { images: res.items },
   };
 }
 
 export default function images({ images }) {
-  console.log(images[0].fields.files[0].fields.file.url);
+  console.log(images);
   const subarraySize = Math.ceil(images.length / 4);
   const slicedArrays = [];
   // Use a loop to slice the original array into four subarrays
