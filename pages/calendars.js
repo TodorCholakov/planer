@@ -18,32 +18,7 @@ export default function Contact({images}) {
   return (
     <main className="bg-gradient-to-r from-red-50 to-red-200  flex flex-col items-center  ">
      
-<div className="gap-2 grid grid-cols-2 sm:grid-cols-5 w-fit p-4">
-    
-      {images.map((item, index) => (
-        console.log (item),
 
-        
-  <Card key={item.sys.id} className="py-4 w-fit ">
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start w-fit">
-        <p className="text-tiny uppercase font-bold">Calendar</p>
-        <small className="text-default-500">2024, one sheet</small>
-        <small className="text-default-500">Available formats: A3+, A3</small>
-        <Button radius="sm"  className="bg-gradient-to-r from-gray-300 to-gray-400 text-white shadow-lg" size="sm">
-      <Link href={`/calendars/${item.fields.slug}`}>See more</Link>
-    </Button>
-      </CardHeader>
-      <CardBody className="overflow-visible p-2 w-fit">
-        <img
-          alt="Card background"
-          className="rounded-xl "
-          src={item.fields.image.fields.file.url}
-          width={270}
-        />
-      </CardBody>
-    </Card>
-      ))}
-    </div>
     <svg
         xmlns="http://www.w3.org/2000/svg"
         fillRule="evenodd"
