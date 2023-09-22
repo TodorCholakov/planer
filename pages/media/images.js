@@ -19,7 +19,7 @@ export async function getStaticProps() {
 
 export default function images({ images }) {
   console.log(images);
-  const subarraySize = Math.ceil(images.length / 4);
+  const subarraySize = Math.floor(images.length / 4);
   const slicedArrays = [];
   // Use a loop to slice the original array into four subarrays
   for (let i = 0; i < images.length; i += subarraySize) {
