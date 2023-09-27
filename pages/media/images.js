@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "@/lib/contentful";
-import Gallery from "react-photo-gallery";
+import PhotoAlbum from "react-photo-album";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "images" });
@@ -48,7 +48,7 @@ export default function images({ images }) {
       />
       <br />
       {imagesArr.length > 0 ? (
-        <Gallery photos={imagesArr} direction={"column"} />
+        <PhotoAlbum layout="columns" padding={0} photos={imagesArr} />
       ) : (
         <div className="flex flex-col justify-center  items-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
           <p className="font-mono  font-bold text-slate-500 text-3xl pl-2 pr-2  flex flex-col  justify-center">
