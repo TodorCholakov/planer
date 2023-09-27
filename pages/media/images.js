@@ -1,17 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { client } from "@/lib/contentful";
+import Gallery from "react-photo-gallery";
 
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Button,
-} from "@nextui-org/react";
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "images" });
-  
   return {
     props: { images: res.items },
   };
@@ -19,57 +11,50 @@ export async function getStaticProps() {
 
 export default function images({ images }) {
   console.log(images);
-  const subarraySize = Math.floor(images.length / 4);
-  const slicedArrays = [];
-  // Use a loop to slice the original array into four subarrays
-  for (let i = 0; i < images.length; i += subarraySize) {
-    const subarray = images.slice(i, i + subarraySize);
-    slicedArrays.push(subarray);
+  const [imagesArr, setImagesArr] = useState([]);
+  let modifiedArray = images.map((item) => {
+    return {
+      src: item.fields.files[0].fields.file.url,
+      title: item.fields.title,
+      width: item.fields.files[0].fields.file.details.image.width,
+      height: item.fields.files[0].fields.file.details.image.height,
+      key: item.fields.slug,
+    };
+  });
+  useEffect(() => {
+    setImagesArr(modifiedArray);
+  }, [images]);
+
+  let searchedArr = [];
+
+  function Search() {
+    let searchValue = document
+      .getElementById("ValueSearchField")
+      .value.toLowerCase();
+    console.log(searchValue);
+    searchedArr = modifiedArray.filter((item) =>
+      item.title.toLowerCase().includes(searchValue)
+    );
+    setImagesArr(searchedArr);
   }
-  console.log(slicedArrays);
-  console.log(slicedArrays[0]);
   return (
-    <div className="flex flex-wrap  justify-center m-1">
-      <div className="lg:basis-1/4 max-w-full md:basis-1/2 sm:">
-        {slicedArrays[0].map((item, index) => {
-          return (
-            <img
-              src={item.fields.files[0].fields.file.url}
-              className="w-100 align-middle p-1"
-            />
-          );
-        })}
-      </div>
-      <div className="lg:basis-1/4 max-w-full md:basis-1/2 sm:">
-        {slicedArrays[1].map((item, index) => {
-          return (
-            <img
-              src={item.fields.files[0].fields.file.url}
-              className="w-100 align-middle p-1"
-            />
-          );
-        })}
-      </div>
-      <div className="lg:basis-1/4 max-w-full md:basis-1/2 sm:">
-        {slicedArrays[2].map((item, index) => {
-          return (
-            <img
-              src={item.fields.files[0].fields.file.url}
-              className="w-100 align-middle p-1"
-            />
-          );
-        })}
-      </div>
-      <div className="lg:basis-1/4 max-w-full md:basis-1/2 sm:">
-        {slicedArrays[3].map((item, index) => {
-          return (
-            <img
-              src={item.fields.files[0].fields.file.url}
-              className="w-100 align-middle p-1"
-            />
-          );
-        })}
-      </div>
+    <div className="text-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
+      <input
+        onChange={Search}
+        id="ValueSearchField"
+        type="text"
+        placeholder="Type here"
+        className="input input-bordered w-full max-w-xs mt-2 mb-2"
+      />
+      {imagesArr.length > 0 ? (
+        <Gallery photos={imagesArr} direction={"column"} />
+      ) : (
+        <div className="flex flex-col justify-center  items-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
+          <p className="font-mono  font-bold text-slate-500 text-3xl pl-2 pr-2  flex flex-col  justify-center">
+            There are no images...
+          </p>
+        </div>
+      )}
     </div>
   );
 }
