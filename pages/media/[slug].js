@@ -39,7 +39,7 @@ export default function image () {
   }, [id]);
 
   return (
-<div className="flex justify-center bg-gradient-to-r from-white to-slate-50">
+<div className="flex justify-center bg-gradient-to-r from-white to-gray-100">
 
 {img.fields ? 
 <Card isFooterBlurred className="col-span-12 sm:col-span-7 m-1 h-full">
@@ -50,7 +50,7 @@ export default function image () {
       <img
         removeWrapper
         alt="Relaxing app background"
-        className="z-0 w-full h-full object-cover max-h-[calc(100vh-70px)]"
+        className="z-0 w-full h-full object-cover max-h-[calc(100vh-70px)] max-w-[calc(800px)]"
         src={img.fields.files[1].fields.file.url}
       />
       <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
