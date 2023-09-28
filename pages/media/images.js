@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { client } from "@/lib/contentful";
+import { client } from "@/utils/contentful";
 import PhotoAlbum from "react-photo-album";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "images" });
@@ -19,6 +20,7 @@ export default function images({ images }) {
       width: item.fields.files[0].fields.file.details.image.width,
       height: item.fields.files[0].fields.file.details.image.height,
       key: item.fields.slug,
+      id: item.sys.id,
     };
   });
   useEffect(() => {
@@ -48,7 +50,12 @@ export default function images({ images }) {
       />
       <br />
       {imagesArr.length > 0 ? (
-        <PhotoAlbum layout="columns" padding={0} photos={imagesArr} />
+        <PhotoAlbum layout="columns" padding={0} photos={imagesArr} 
+        renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
+          <Link href={`/media/${photo.id}`} style={wrapperStyle} target="_self" rel="noreferrer noopener">
+              {renderDefaultPhoto({ wrapped: true })}
+          </Link>
+      )}/>
       ) : (
         <div className="flex flex-col justify-center  items-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
           <p className="font-mono  font-bold text-slate-500 text-3xl pl-2 pr-2  flex flex-col  justify-center">
