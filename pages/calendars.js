@@ -1,5 +1,5 @@
 import React from 'react'
-import { client } from '@/lib/contentful';
+import { client } from '@/utils/contentful';
 import Link from 'next/link';
 
 
