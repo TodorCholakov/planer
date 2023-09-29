@@ -1,84 +1,84 @@
-import React from 'react'
-import Link from 'next/link';
-import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+import React from "react";
+import Link from "next/link";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+  Button,
+} from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { titleAnimation, containerIndex } from "../../animations";
 export default function mediaMain() {
   return (
-
-    <div className='flex flex-col justify-center  items-center bg-gradient-to-r from-rose-50 to-rose-300 min-h-[calc(100vh-150px)]'>
-   
-       
-    
-    <div className="flex flex-col justify-center   items-center min-h-[calc(100vh-150px)]">
-    <motion.ul
-        className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
-        variants={containerIndex}
-        initial="hidden"
-        animate="show"
-      >
-        <motion.li variants={titleAnimation}>
-        <Card 
-      isFooterBlurred
-      radius="lg"
-      className="border-none w-fit drop-shadow-xl m-2 hover:scale-105 cursor-pointer"
-    >
-      <img
-        alt="Woman listing to music"
-        className="object-cover"
-        height={250}
-        src="/mainImages/media.jpg"
-        width={250}
-      />
-      <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-       <Link href="/media/images"><p className=" text-white/80 text-tiny">Sounds</p></Link> 
-        
-      </CardFooter>
-    
-    </Card>
-        </motion.li>
-        <motion.li  variants={titleAnimation}>
-        <Link href="/media/images">
-        <Card
-      isFooterBlurred
-      radius="lg"
-      className="border-none w-fit m-2"
-    >
-      <img
-        alt="Woman listing to music"
-        className="object-cover"
-        height={250}
-        src="/mainImages/media.jpg"
-        width={250}
-      />
-      <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className=" text-white/80 text-tiny">Images</p>
-        
-      </CardFooter>
-    </Card>
-    </Link>
-        </motion.li>
-        <motion.li  variants={titleAnimation}>
-        <Card
-      isFooterBlurred
-      radius="lg"
-      className="border-none w-fit m-2"
-    >
-      <img
-        alt="Woman listing to music"
-        className="object-cover"
-        height={250}
-        src="/mainImages/media.jpg"
-        width={250}
-      />
-      <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-        <p className=" text-white/80 text-tiny">Sounds</p>
-        
-      </CardFooter>
-    </Card>
-        </motion.li>
-        
-      </motion.ul>
+    <div className="flex flex-col justify-center  items-center bg-gradient-to-r from-rose-50 to-rose-300 min-h-[calc(100vh-150px)]">
+      <div className="flex flex-col justify-center   items-center min-h-[calc(100vh-150px)]">
+        <motion.ul
+          className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3"
+          variants={containerIndex}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.li variants={titleAnimation}>
+            <Card
+              isFooterBlurred
+              radius="lg"
+              className="border-none w-fit drop-shadow-xl m-2 hover:scale-105 cursor-pointer"
+            >
+              <img
+                alt="Woman listing to music"
+                className="object-cover"
+                height={250}
+                src="/mainImages/media.jpg"
+                width={250}
+              />
+              <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                <Link href="/media/images">
+                  <p className=" text-white/80 text-tiny">Sounds</p>
+                </Link>
+              </CardFooter>
+            </Card>
+          </motion.li>
+          <motion.li variants={titleAnimation}>
+            <Link href="/media/images">
+              <Card
+                isFooterBlurred
+                radius="lg"
+                className="border-none w-fit m-2"
+              >
+                <img
+                  alt="Woman listing to music"
+                  className="object-cover"
+                  height={250}
+                  src="/mainImages/media.jpg"
+                  width={250}
+                />
+                <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                  <p className=" text-white/80 text-tiny">Images</p>
+                </CardFooter>
+              </Card>
+            </Link>
+          </motion.li>
+          <motion.li variants={titleAnimation}>
+            <Card isFooterBlurred radius="lg" className="border-none w-fit m-2">
+              <img
+                alt="Woman listing to music"
+                className="object-cover"
+                height={250}
+                src="/mainImages/media.jpg"
+                width={250}
+              />
+              <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                <p className=" text-white/80 text-tiny">Sounds</p>
+              </CardFooter>
+            </Card>
+          </motion.li>
+          <motion.li
+            className="w-56 h-56 rounded-xl border-solid border-gray-100 border-2"
+            variants={titleAnimation}
+          ></motion.li>
+        </motion.ul>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -109,8 +109,6 @@ export default function mediaMain() {
           </g>
         </g>
       </svg>
-      </div>
-      
-  
-  )
+    </div>
+  );
 }

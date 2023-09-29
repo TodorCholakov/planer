@@ -3,6 +3,7 @@ import { client } from "@/utils/contentful";
 import { useRouter } from 'next/router'
 import { BiSolidDownload } from 'react-icons/bi';
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+import BottomLine from '../components/BottomLine';
   
 
 
@@ -37,14 +38,14 @@ export default function image () {
     );
   
   }, [id]);
-
+console.log (img)
   return (
-<div className="flex justify-center bg-gradient-to-r from-white to-gray-100">
+<div className="flex flex-col items-center  bg-gradient-to-r from-white to-gray-100">
 
 {img.fields ? 
 <Card isFooterBlurred className="col-span-12 sm:col-span-7 m-1 h-full">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
-        <p className="text-tiny text-white/60 uppercase font-bold">Your day your way</p>
+        <p className="text-tiny text-white/60 uppercase font-bold">{img.fields.title}</p>
         <h4 className="text-white/90 font-medium text-xl">Your checklist for better sleep</h4>
       </CardHeader>
       <img
@@ -67,8 +68,8 @@ export default function image () {
         </div>
         <button className="btn btn-outline btn-warning">Download <BiSolidDownload className="text-fbbf24 text-2xl" /></button>
       </CardFooter>
-    </Card>: ""}
-  
+    </Card>: <span className="loading loading-ring loading-lg"></span>}
+    <BottomLine />
     </div>
   )
 }

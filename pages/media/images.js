@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "@/utils/contentful";
 import PhotoAlbum from "react-photo-album";
 import Link from "next/link";
+import BottomLine from "../components/BottomLine";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "images" });
@@ -40,7 +41,7 @@ export default function images({ images }) {
     setImagesArr(searchedArr);
   }
   return (
-    <div className="text-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
+    <div className="text-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)] p-1">
       <input
         onChange={Search}
         id="ValueSearchField"
@@ -50,7 +51,7 @@ export default function images({ images }) {
       />
       <br />
       {imagesArr.length > 0 ? (
-        <PhotoAlbum layout="columns" padding={0} photos={imagesArr} 
+        <PhotoAlbum layout="columns" spacing={2} padding={0} photos={imagesArr} 
         renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
           <Link href={`/media/${photo.id}`} style={wrapperStyle} target="_self" rel="noreferrer noopener">
               {renderDefaultPhoto({ wrapped: true })}
@@ -63,6 +64,7 @@ export default function images({ images }) {
           </p>
         </div>
       )}
+      <BottomLine />
     </div>
   );
 }
