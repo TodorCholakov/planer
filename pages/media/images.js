@@ -51,12 +51,22 @@ export default function images({ images }) {
       />
       <br />
       {imagesArr.length > 0 ? (
-        <PhotoAlbum layout="columns" spacing={2} padding={0} photos={imagesArr} 
-        renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
-          <Link href={`/media/${photo.id}`} style={wrapperStyle} target="_self" rel="noreferrer noopener">
+        <PhotoAlbum
+          layout="columns"
+          spacing={2}
+          padding={0}
+          photos={imagesArr}
+          renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
+            <Link
+              href={`/media/${photo.id}`}
+              style={wrapperStyle}
+              target="_self"
+              rel="noreferrer noopener"
+            >
               {renderDefaultPhoto({ wrapped: true })}
-          </Link>
-      )}/>
+            </Link>
+          )}
+        />
       ) : (
         <div className="flex flex-col justify-center  items-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
           <p className="font-mono  font-bold text-slate-500 text-3xl pl-2 pr-2  flex flex-col  justify-center">

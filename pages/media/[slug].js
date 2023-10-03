@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { client } from "@/utils/contentful";
 import { useRouter } from "next/router";
 import { BiSolidDownload } from "react-icons/bi";
+import { saveAs } from "file-saver";
+import Link from "next/link";
 import {
   Card,
   CardHeader,
@@ -25,6 +27,13 @@ export default function image() {
       return null;
     }
   }
+
+  const saveFile = () => {
+    saveAs(
+      `https://${img.fields.files[2].fields.file.url}`,
+      `${img.fields.title}.jpg`
+    );
+  };
 
   const [img, setImg] = useState({});
   useEffect(() => {
@@ -72,7 +81,7 @@ export default function image() {
                 </p>
               </div>
             </div>
-            <button className="btn btn-outline btn-warning">
+            <button onClick={saveFile} className="btn btn-outline btn-warning" >
               Download <BiSolidDownload className="text-fbbf24 text-2xl" />
             </button>
           </CardFooter>
