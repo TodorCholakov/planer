@@ -30,12 +30,14 @@ export default function image() {
 
   const saveFile = () => {
     saveAs(
-      `https://${img.fields.files[2].fields.file.url}`,
+      `https://${img.fields.files[0].fields.file.url}`,
       `${img.fields.title}.jpg`
     );
+    setAlert(true)
   };
 
   const [img, setImg] = useState({});
+  const [alert, setAlert] = useState(false);
   useEffect(() => {
     // Replace 'YOUR_ENTRY_ID' with the actual ID of the entry you want to fetch
 
@@ -51,6 +53,24 @@ export default function image() {
   console.log(img);
   return (
     <div className="flex flex-col items-center  bg-gradient-to-r from-white to-gray-100">
+        {alert ? 
+        <div className="alert alert-warning w-96 mt-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="stroke-current shrink-0 h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span>Thank you for downloading our content!</span>
+      </div> : ""}
+      
       {img.fields ? (
         <Card isFooterBlurred className="col-span-12 sm:col-span-7 m-1 h-full">
           <CardHeader className="absolute z-10 top-1 flex-col items-start">
@@ -81,7 +101,7 @@ export default function image() {
                 </p>
               </div>
             </div>
-            <button onClick={saveFile} className="btn btn-outline btn-warning" >
+            <button onClick={saveFile} className="btn btn-outline btn-warning">
               Download <BiSolidDownload className="text-fbbf24 text-2xl" />
             </button>
           </CardFooter>

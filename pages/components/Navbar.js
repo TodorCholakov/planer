@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-import { MdLanguage } from "react-icons/md";
 import {
   Navbar,
   NavbarBrand,
@@ -43,7 +41,7 @@ export default function NavbarMenuA() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/calendars">
+          <Link color="foreground" href="/calendars/calendars">
             Calendars
           </Link>
         </NavbarItem>
@@ -53,8 +51,8 @@ export default function NavbarMenuA() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/media/media-main" aria-current="page">
-            Media
+          <Link href="/media/images" aria-current="page">
+            Images
           </Link>
         </NavbarItem> 
       </NavbarContent>
@@ -78,8 +76,8 @@ export default function NavbarMenuA() {
           <Link className="w-full" href="/website_development" size="lg">
             Web development
           </Link>
-          <Link className="w-full" href="/media/media-main" size="lg">
-            Media
+          <Link className="w-full" href="/media/images" size="lg">
+            Images
           </Link>
         </NavbarMenuItem>
     
