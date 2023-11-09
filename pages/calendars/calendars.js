@@ -15,7 +15,7 @@ export async function getStaticProps() {
     console.log(images);
     const [imagesArr, setImagesArr] = useState([]);
     let modifiedArray = images.map((item) => {
-      return {src:item.fields.images[3].fields.file.url};
+      return {src:item.fields.images[3].fields.file.url, id:item.sys.id};
   });
   useEffect(() => {
     setImagesArr(modifiedArray);
@@ -44,14 +44,16 @@ export async function getStaticProps() {
       />
       <br />
       {imagesArr.length > 0 ? (
+       
         <PhotoAlbum
           layout="columns"
           spacing={2}
           padding={0}
           photos={imagesArr}
           renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
+            console.log (photo),
             <Link
-              href={`/media/${photo.id}`}
+              href={`/calendars/${photo.id}`}
               style={wrapperStyle}
               target="_self"
               rel="noreferrer noopener"

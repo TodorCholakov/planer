@@ -71,15 +71,17 @@ export default function NavbarMenuA() {
       
         </NavbarContent>
       <NavbarMenu>
-        <NavbarMenuItem>
+        <NavbarMenuItem >
         
           <Link className="w-full" href="/website_development" size="lg">
             Web development
           </Link>
+             </NavbarMenuItem>
+             <NavbarMenuItem >
           <Link className="w-full" href="/media/images" size="lg">
             Images
           </Link>
-        </NavbarMenuItem>
+          </NavbarMenuItem>
     
       </NavbarMenu>
     </Navbar>

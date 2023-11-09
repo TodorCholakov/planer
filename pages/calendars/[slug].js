@@ -45,8 +45,9 @@ export default function image() {
       if (entry) {
         // Logs the entry metadata
         console.log(id);
+        console.log(id);
         setImg(entry);
-        console.log(entry.fields.files[1].fields.file.url);
+        console.log(entry);
       }
     });
   }, [id]);
@@ -71,18 +72,49 @@ export default function image() {
         <span>Thank you for downloading our content!</span>
       </div> : ""}
       
-     <div className="carousel carousel-end rounded-box">
-  <div className="carousel-item">
-    <img src="/i1 (2).jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="/1 (2).jpg" alt="Drink" />
-  </div> 
-  <div className="carousel-item">
-    <img src="indexBackground.jpg" alt="Drink" />
-  </div> 
-  
-</div>
+      {img.fields ? (
+        
+        <Card isFooterBlurred className="col-span-12 sm:col-span-7 m-1">
+          <CardHeader className="absolute z-10 top-1 flex-col items-start">
+            <p className="text-tiny text-white/60 uppercase font-bold">
+              {img.fields.title}
+            </p>
+          </CardHeader>
+          <img
+            alt="Relaxing app background"
+            className="z-0 w-full  object-cover max-w-[calc(800px)]"
+            src={img.fields.images[3].fields.file.url}
+          />
+          <CardFooter className="absolute bg-black/40 bottom-0 z-10  border-default-600 dark:border-default-100">
+            <div className="flex flex-grow gap-2 items-center">
+              <img
+                alt="Breathing app icon"
+                className="rounded-full w-10 h-11 bg-black"
+                src="/logo.jpg"
+              />
+              <div className="flex flex-col">
+                <p className="text-tiny text-white/60">
+                  {img.fields.description}
+                </p>
+                <p className="text-tiny text-white/60 text-base">
+                  Files included:{" "}
+                </p>
+        <p className="text-tiny text-white/60">adsf</p>
+        <p className="text-tiny text-white/60">adsf</p>
+        <p className="text-tiny text-white/60">adsf</p>
+        <p className="text-tiny text-white/60">adsf</p>
+        <p className="text-tiny text-white/60">adsf</p>
+              </div>
+            </div>
+            <button onClick={saveFile} className="btn btn-outline btn-warning">
+              Download <BiSolidDownload className="text-fbbf24 text-2xl" />
+            </button>
+          </CardFooter>
+        </Card>
+   
+      ) : (
+        <span className="loading loading-ring loading-lg"></span>
+      )}
       <BottomLine />
     </div>
   );
