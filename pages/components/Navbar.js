@@ -40,16 +40,16 @@ export default function NavbarMenuA() {
             Web development
           </Link>
         </NavbarItem>
-        <NavbarItem>
+         {/* <NavbarItem>
           <Link color="foreground" href="/calendars/calendars">
             Calendars
           </Link>
         </NavbarItem>
-        <NavbarItem>
+      <NavbarItem>
           <Link href="#" aria-current="page">
             Planner
           </Link>
-        </NavbarItem>
+        </NavbarItem>*/} 
         <NavbarItem>
           <Link href="/media/images" aria-current="page">
             Images
