@@ -30,7 +30,7 @@ export default function image() {
 
   const saveFile = () => {
     saveAs(
-      `https://${img.fields.files[0].fields.file.url}`,
+      `https://${img.fields.files[2].fields.file.url}`,
       `${img.fields.title}.jpg`
     );
     setAlert(true)
