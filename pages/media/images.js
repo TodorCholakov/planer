@@ -70,7 +70,7 @@ export default function images({ images }) {
       ) : (
         <div className="flex flex-col justify-center  items-center bg-gradient-to-r from-white to-slate-50 min-h-[calc(100vh-300px)]">
           <p className="font-mono  font-bold text-slate-500 text-3xl pl-2 pr-2  flex flex-col  justify-center">
-            There are no images...
+            Loading...
           </p>
         </div>
       )}
