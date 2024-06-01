@@ -30,7 +30,7 @@ export default function image() {
 
   const saveFile = () => {
     saveAs(
-      `https://${img.fields.files[2].fields.file.url}`,
+      `https://${img.fields.file.fields.file.url}`,
       `${img.fields.title}.jpg`
     );
     setAlert(true)
@@ -46,7 +46,7 @@ export default function image() {
         // Logs the entry metadata
         console.log(id);
         setImg(entry);
-        console.log(entry.fields.files[1].fields.file.url);
+        //console.log(entry.fields.file.fields.file.url);
       }
     });
   }, [id]);
@@ -81,7 +81,7 @@ export default function image() {
           <img
             alt="Relaxing app background"
             className="z-0 w-full h-full object-cover max-h-[calc(100vh-70px)] max-w-[calc(800px)]"
-            src={img.fields.files[1].fields.file.url}
+            src={img.fields.file.fields.file.url+`?h=600&fit=thumb`}
           />
           <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
             <div className="flex flex-grow gap-2 items-center">
@@ -96,8 +96,8 @@ export default function image() {
                 </p>
                 <p className="text-tiny text-white/60">
                   Image resolution:{" "}
-                  {img.fields.files[2].fields.file.details.image.width}/
-                  {img.fields.files[2].fields.file.details.image.height}px.
+                  {img.fields.file.fields.file.details.image.width}/
+                  {img.fields.file.fields.file.details.image.height}px.
                 </p>
               </div>
             </div>

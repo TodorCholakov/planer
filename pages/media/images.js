@@ -16,10 +16,10 @@ export default function images({ images }) {
   const [imagesArr, setImagesArr] = useState([]);
   let modifiedArray = images.map((item) => {
     return {
-      src: item.fields.files[0].fields.file.url,
+      src: item.fields.file.fields.file.url+`?h=300&fit=thumb`,
       title: item.fields.title,
-      width: item.fields.files[0].fields.file.details.image.width,
-      height: item.fields.files[0].fields.file.details.image.height,
+      width: item.fields.file.fields.file.details.image.width,
+      height: item.fields.file.fields.file.details.image.height,
       key: item.fields.slug,
       id: item.sys.id,
     };
